@@ -1,0 +1,3 @@
+C:/Users/iesty/Documents/Projects/2dgame/cmake-build-debug/CMakeFiles/SFMLGame.dir
+C:/Users/iesty/Documents/Projects/2dgame/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/iesty/Documents/Projects/2dgame/cmake-build-debug/CMakeFiles/rebuild_cache.dir
