@@ -61,7 +61,7 @@ public:
                 clock.restart();
                 playerUp = false;
             }
-            yvel -= 1.001;
+            yvel -= 1;
         }
 
 
@@ -71,29 +71,32 @@ public:
         if(!(playerUp || playerDown)){
             yvel = 0;
         }
-        if(xvel>= 3){
-            xvel = 4;
-        }
-        if(xvel<= -3){
-            xvel = -3;
-        }
-        if(yvel >= 3){
-            yvel = 2;
-        }
+        //if(xvel>= 3){
+          //  xvel = 4;
+        //}
+       // if(xvel<= -3){
+         //   xvel = -3;
+        //}
+        //if(yvel >= 3){
+          //  yvel = 2;
+        //}
         //if(yvel <= -3){
             //yvel = -3;
         //}
 
-        if(ypos < 350) {
+        if(ypos != 350 || xpos > 864) {
             yvel += 1;
         }
 
         xpos += xvel;
         ypos += yvel;
+
+
         //cout << yvel << endl;
         //cout << xpos << endl;
     }
 };
+
 
 
 #endif //SFMLGAME_PLAYERCLASS_H

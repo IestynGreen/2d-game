@@ -4,6 +4,9 @@
 #include <SFML/Window.hpp>
 #include "playerClass.h"
 
+
+
+
 int windowWidth = 1536;
 int windowHeight = 865;
 
@@ -11,17 +14,26 @@ using namespace sf;
 using namespace std;
 
 
+
 int main(){
+    cout << "fart" <<endl;
     //Create the main window
     RenderWindow app(VideoMode(windowWidth,windowHeight), "Platformer");
-
     bool playerUp, playerDown, playerLeft, playerRight = false;
-    bool playerUpJump;
+
 
     playerClass playerObject;
 
-    Texture texture;
-    texture.loadFromFile("C:/Users/iesty/Documents/Projects/2dgame/data/images/animation.png");
+    Texture texture, back;
+
+
+    texture.loadFromFile("C:/Users/iesty/Documents/Projects/2d-game/2dgame/data/images/animation.png");
+
+    back.loadFromFile("C:/Users/iesty/Documents/Projects/2d-game/2dgame/data/images/bckgrnd.png");
+    IntRect Size(0, 432 ,865, 1563);
+    Sprite bckgrnd(back, Size);
+
+
 
     IntRect rectSourceSprite(0, 0 ,50, 50);
     IntRect rectSourceSprite2(0, 50 ,50, 50);
@@ -34,9 +46,16 @@ int main(){
     Background.loadFromFile("C:/Users/iesty/Documents/Projects/2dgame/data/images/background.png");
     Sprite BackgroundSprite(Background);
 
+   // Music level1;
+    //level1.openFromFile("C:/Users/iesty/Documents/Projects/2d-game/2dgame/data/Audio/level1");
+
+
+
     //Start the game loop
     while(app.isOpen())
     {
+
+
         //Process events
         Event event{};
         while(app.pollEvent(event)) {
@@ -121,10 +140,17 @@ int main(){
         if(!(Keyboard::isKeyPressed(Keyboard::Right))) playerRight = false;
         playerObject.update(playerUp, playerDown, playerRight, playerLeft);
 
+        //level1.play();
+
+
         //Clear screen
         app.clear(sf::Color(0, 0, 0));
-        app.draw(BackgroundSprite);
+
+        //app.draw(BackgroundSprite);
+        app.draw(bckgrnd);
         app.draw(sprite);
+
+
         sprite.move(Vector2f(playerObject.xvel, playerObject.yvel));
 
 

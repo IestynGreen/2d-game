@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/iesty/Documents/Projects/2dgame
+# Install script for directory: C:/Users/iesty/Documents/Projects/2d-game/2dgame
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/2dgame")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/SFMLGame")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/iesty/Documents/Projects/2dgame/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/iesty/Documents/Projects/2d-game/2dgame/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
